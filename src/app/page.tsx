@@ -1,69 +1,173 @@
-import Image from "next/image";
+import Link from "next/link";
+import { LinkCard } from "@/components/LinkCard";
+import { Newsletter } from "@/components/Newsletter";
+import { MethodologyScores } from "@/components/ScoreBar";
+import { categoryList, siteConfig } from "@/lib/site-config";
+import { products } from "@/lib/content/products";
+import { comparisons } from "@/lib/content/comparisons";
+import { bestLists } from "@/lib/content/best";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      {/* Hero */}
+      <section className="py-16 sm:py-24 max-w-3xl">
+        <h1 className="font-display font-semibold text-4xl sm:text-5xl leading-[1.1]">
+          {siteConfig.tagline}
+        </h1>
+        <p className="mt-6 text-lg text-ink-muted max-w-xl">
+          SuiteRidge is an independent research platform that helps small business owners choose
+          software — reviews, comparisons, and shortlists built on a published evaluation
+          methodology, not vendor marketing.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="#categories"
+            className="inline-flex items-center rounded-full bg-accent text-accent-ink px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            Browse categories
+          </a>
+          <Link
+            href="/methodology"
+            className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium hover:border-accent hover:text-accent transition-colors"
+          >
+            Read our methodology
+          </Link>
+        </div>
+      </section>
+
+      {/* What SuiteRidge does */}
+      <section className="py-14 border-t border-border grid gap-6 sm:grid-cols-3">
+        <div>
+          <h2 className="font-display font-semibold text-lg mb-2">Independent research</h2>
+          <p className="text-sm text-ink-muted">
+            No vendor pays for a better ranking. Every recommendation is scored against the same
+            published criteria, every time.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div>
+          <h2 className="font-display font-semibold text-lg mb-2">Not a directory</h2>
+          <p className="text-sm text-ink-muted">
+            We don&apos;t list every tool that exists — we shortlist the ones worth your time for a
+            specific situation, and say plainly who should avoid each one.
+          </p>
         </div>
-      </main>
+        <div>
+          <h2 className="font-display font-semibold text-lg mb-2">Methodology published</h2>
+          <p className="text-sm text-ink-muted">
+            Vendor-stated facts, our own analysis, and aggregated user feedback are labeled
+            separately, everywhere on the site.
+          </p>
+        </div>
+      </section>
+
+      {/* Featured categories */}
+      <section id="categories" className="py-14 border-t border-border scroll-mt-20">
+        <div className="flex items-baseline justify-between mb-6">
+          <h2 className="font-display font-semibold text-2xl">Browse by category</h2>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {categoryList.map((c) => (
+            <LinkCard
+              key={c.slug}
+              href={`/categories/${c.slug}`}
+              eyebrow="Category"
+              title={c.name}
+              description={c.description}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Featured comparisons */}
+      <section className="py-14 border-t border-border">
+        <h2 className="font-display font-semibold text-2xl mb-6">Featured comparisons</h2>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {comparisons.map((c) => (
+            <LinkCard
+              key={c.slug}
+              href={`/compare/${c.slug}`}
+              eyebrow="Compare"
+              title={c.title}
+              description={c.intro}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Latest reviews */}
+      <section className="py-14 border-t border-border">
+        <h2 className="font-display font-semibold text-2xl mb-6">Latest reviews</h2>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {products.map((p) => (
+            <LinkCard
+              key={p.slug}
+              href={`/reviews/${p.slug}`}
+              eyebrow={`Last verified ${p.pricingLastVerified}`}
+              title={p.name}
+              description={p.tagline}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Best software guides */}
+      <section className="py-14 border-t border-border">
+        <h2 className="font-display font-semibold text-2xl mb-6">Best software guides</h2>
+        <div className="grid gap-5 sm:grid-cols-3">
+          {bestLists.map((b) => (
+            <LinkCard key={b.slug} href={`/best/${b.slug}`} eyebrow="Best-for" title={b.title} description={b.situation} />
+          ))}
+        </div>
+      </section>
+
+      {/* How we evaluate software */}
+      <section className="py-14 border-t border-border">
+        <div className="grid gap-10 sm:grid-cols-2 items-start">
+          <div>
+            <h2 className="font-display font-semibold text-2xl mb-3">How we evaluate software</h2>
+            <p className="text-ink-muted mb-4">
+              Every review is scored against four fixed criteria so comparisons within a category
+              are apples-to-apples, not vibes-to-vibes.
+            </p>
+            <Link href="/methodology" className="text-sm font-medium text-accent hover:underline">
+              Read the full methodology &rarr;
+            </Link>
+          </div>
+          <MethodologyScores
+            scores={{ featureCoverage: 8, pricingTransparency: 7, easeOfAdoption: 7, smbFit: 8 }}
+          />
+        </div>
+      </section>
+
+      {/* Editorial trust */}
+      <section className="py-14 border-t border-border max-w-2xl">
+        <h2 className="font-display font-semibold text-2xl mb-3">Who&apos;s behind this</h2>
+        <p className="text-ink-muted">
+          SuiteRidge is an independent editorial operation. We don&apos;t accept payment for
+          placement, we don&apos;t invent hands-on testing we haven&apos;t done, and we say when a
+          product isn&apos;t a good fit — including for products we recommend elsewhere on the
+          site.{" "}
+          <Link href="/about" className="text-accent hover:underline">
+            More about SuiteRidge &rarr;
+          </Link>
+        </p>
+      </section>
+
+      {/* Newsletter */}
+      <section className="py-14 border-t border-border">
+        <Newsletter />
+      </section>
+
+      {/* Affiliate disclosure note */}
+      <section className="py-10 border-t border-border text-sm text-ink-faint max-w-2xl">
+        Some links on this site are affiliate links — if you sign up through one, SuiteRidge may
+        earn a commission at no extra cost to you. This never affects which products we recommend
+        or how they&apos;re ranked.{" "}
+        <Link href="/affiliate-disclosure" className="text-accent hover:underline">
+          Full disclosure &rarr;
+        </Link>
+      </section>
     </div>
   );
 }

@@ -1,0 +1,101 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { PageHeader } from "@/components/PageHeader";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { JsonLd } from "@/components/JsonLd";
+import { itemListSchema } from "@/lib/schema";
+import { categoryList, siteConfig } from "@/lib/site-config";
+import { bestLists, getBestList } from "@/lib/content/best";
+import { getProduct } from "@/lib/content/products";
+
+export function generateStaticParams() {
+  return bestLists.map((b) => ({ slug: b.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const list = getBestList(slug);
+  if (!list) return {};
+  return {
+    title: list.title,
+    description: list.metaDescription,
+    alternates: { canonical: `/best/${list.slug}` },
+  };
+}
+
+export default async function BestListPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const list = getBestList(slug);
+  if (!list) notFound();
+
+  const category = categoryList.find((c) => c.slug === list.category)!;
+  const picks = list.picks
+    .map((pick) => ({ ...pick, product: getProduct(pick.productSlug)! }))
+    .sort((a, b) => a.rank - b.rank);
+
+  return (
+    <article className="mx-auto max-w-3xl px-4 sm:px-6 py-10">
+      <JsonLd
+        data={itemListSchema(
+          picks.map((p) => ({ name: p.product.name, url: `${siteConfig.url}/reviews/${p.product.slug}` }))
+        )}
+      />
+      <PageHeader
+        eyebrow={category.shortName}
+        title={list.title}
+        dek={list.intro}
+        breadcrumbs={[
+          { name: category.shortName, href: `/categories/${category.slug}` },
+          { name: list.title, href: `/best/${list.slug}` },
+        ]}
+        lastVerified={list.lastVerified}
+      />
+
+      <p className="text-sm text-ink-faint mb-8 -mt-4">
+        Situation covered here: <span className="text-ink-muted">{list.situation}</span>
+      </p>
+
+      <div className="flex flex-col gap-6">
+        {picks.map(({ rank, oneLinerVerdict, product }) => (
+          <div key={product.slug} className="rounded-xl border border-border bg-surface p-6 sm:p-7">
+            <div className="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <span className="font-mono text-xs text-accent uppercase tracking-wider">#{rank} Pick</span>
+                <h2 className="font-display font-semibold text-xl mt-1">{product.name}</h2>
+              </div>
+              <span className="text-sm text-ink-faint whitespace-nowrap">{product.startingPrice}</span>
+            </div>
+            <p className="text-ink-muted mb-5">{oneLinerVerdict}</p>
+            <div className="flex flex-wrap items-center gap-4">
+              <AffiliateCTA product={product} />
+              <Link href={`/reviews/${product.slug}`} className="text-sm text-accent hover:underline">
+                Full {product.name} review &rarr;
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p className="mt-10 text-xs text-ink-faint">
+        Ranking reflects our{" "}
+        <Link href="/methodology" className="underline hover:text-accent">
+          published methodology
+        </Link>
+        , not affiliate commission rates. Some links above are affiliate links — see our{" "}
+        <Link href="/affiliate-disclosure" className="underline hover:text-accent">
+          affiliate disclosure
+        </Link>
+        .
+      </p>
+    </article>
+  );
+}

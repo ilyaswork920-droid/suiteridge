@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #f5f3ec;
+  --surface: #ffffff;
+  --surface-alt: #ece7d9;
+  --ink: #1c2119;
+  --ink-muted: #5c594c;
+  --ink-faint: #8a8674;
+  --accent: #2f5d4e;
+  --accent-ink: #eaf2ed;
+  --accent-soft: #dee8e1;
+  --border: #dcd5c2;
+  --good: #2f6d4c;
+  --warn: #9c6a22;
+  --low: #a6503c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #141813;
+    --surface: #1c2219;
+    --surface-alt: #232b21;
+    --ink: #ece8db;
+    --ink-muted: #a9a491;
+    --ink-faint: #726e5e;
+    --accent: #74c4a3;
+    --accent-ink: #0f1912;
+    --accent-soft: #243a30;
+    --border: #333a2e;
+    --good: #74c4a3;
+    --warn: #e0ae63;
+    --low: #e08a73;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+  --color-good: var(--good);
+  --color-warn: var(--warn);
+  --color-low: var(--low);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-public-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
