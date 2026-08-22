@@ -25,6 +25,29 @@ export const comparisons: ComparisonEntry[] = [
     lastVerified: "2026-08-15",
   },
   {
+    slug: "mailchimp-vs-hubspot",
+    category: "email-marketing",
+    productSlugs: ["mailchimp", "hubspot"],
+    title: "Mailchimp vs HubSpot",
+    metaDescription:
+      "Mailchimp vs HubSpot compared on pricing structure, automation depth, and what's actually free — with a clear verdict for each situation.",
+    intro:
+      "These two solve different problems that happen to overlap in email marketing. Mailchimp is a dedicated email tool with straightforward, contact-based pricing. HubSpot is an all-in-one CRM with email marketing as one module — a genuinely useful free CRM tier, but a steep price jump once real automation is needed.",
+    chooseFirstIf: [
+      "You want a dedicated email marketing tool, not a full CRM you'll only use a fraction of",
+      "You want predictable contact-based pricing without a mandatory onboarding fee",
+      "Your list is under a few thousand contacts and your automation needs are simple",
+    ],
+    chooseSecondIf: [
+      "You want CRM, sales, and marketing tools sharing one contact database instead of syncing separate platforms",
+      "You can run on HubSpot's free CRM tier long-term, or you've budgeted for Professional's $800-890/mo plus its mandatory $3,000 onboarding fee",
+      "You need deep reporting, attribution, and multi-team governance that Mailchimp doesn't offer at any tier",
+    ],
+    verdict:
+      "If the job is just sending good email campaigns, Mailchimp does it for less money and less setup. HubSpot's free CRM is a legitimate long-term option too — but its email marketing only gets genuinely powerful at Professional, which costs materially more than Mailchimp's entire range, onboarding fee included. Choose HubSpot for the CRM, not to save money on email.",
+    lastVerified: "2026-08-22",
+  },
+  {
     slug: "asana-vs-clickup",
     category: "project-management",
     productSlugs: ["asana", "clickup"],
