@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { JsonLd } from "@/components/JsonLd";
 import { itemListSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { bestLists, getBestList } from "@/lib/content/best";
 import { getProduct } from "@/lib/content/products";
@@ -21,11 +22,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const list = getBestList(slug);
   if (!list) return {};
-  return {
+  return buildMetadata({
     title: list.title,
     description: list.metaDescription,
-    alternates: { canonical: `/best/${list.slug}` },
-  };
+    path: `/best/${list.slug}`,
+  });
 }
 
 export default async function BestListPage({

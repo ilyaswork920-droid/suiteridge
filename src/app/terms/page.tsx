@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { Callout } from "@/components/Callout";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Terms of Use",
   description: "The terms governing use of the SuiteRidge website.",
-  alternates: { canonical: "/terms" },
-};
+  path: "/terms",
+  type: "website",
+});
 
 const lastUpdated = "August 15, 2026";
 

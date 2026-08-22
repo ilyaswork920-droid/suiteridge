@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { alternativesEntries, getAlternatives } from "@/lib/content/alternatives";
 import { getProduct } from "@/lib/content/products";
@@ -21,11 +22,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const entry = getAlternatives(slug);
   if (!entry) return {};
-  return {
+  return buildMetadata({
     title: entry.title,
     description: entry.metaDescription,
-    alternates: { canonical: `/alternatives/${entry.slug}` },
-  };
+    path: `/alternatives/${entry.slug}`,
+  });
 }
 
 export default async function AlternativesPage({

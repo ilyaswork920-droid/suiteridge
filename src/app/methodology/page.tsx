@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { SourceTag } from "@/components/SourceTag";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Our Methodology",
   description: "How SuiteRidge evaluates software: the six criteria behind every review and ranking.",
-  alternates: { canonical: "/methodology" },
-};
+  path: "/methodology",
+  type: "website",
+});
 
 const criteria = [
   {

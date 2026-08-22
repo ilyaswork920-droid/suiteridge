@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { LinkCard } from "@/components/LinkCard";
 import { JsonLd } from "@/components/JsonLd";
 import { collectionPageSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { products } from "@/lib/content/products";
 import { comparisons } from "@/lib/content/comparisons";
@@ -23,11 +24,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const category = categoryList.find((c) => c.slug === slug);
   if (!category) return {};
-  return {
+  return buildMetadata({
     title: category.name,
     description: category.description,
-    alternates: { canonical: `/categories/${category.slug}` },
-  };
+    path: `/categories/${category.slug}`,
+    type: "website",
+  });
 }
 
 export default async function CategoryPage({

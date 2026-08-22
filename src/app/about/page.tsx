@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About SuiteRidge",
   description: "Why SuiteRidge exists, who it's for, and what it refuses to be.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  type: "website",
+});
 
 export default function AboutPage() {
   return (

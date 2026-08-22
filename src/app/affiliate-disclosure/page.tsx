@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Affiliate Disclosure",
   description: "How SuiteRidge makes money, and why it doesn't affect what we recommend.",
-  alternates: { canonical: "/affiliate-disclosure" },
-};
+  path: "/affiliate-disclosure",
+  type: "website",
+});
 
 export default function AffiliateDisclosurePage() {
   return (

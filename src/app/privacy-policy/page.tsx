@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { Callout } from "@/components/Callout";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description: "How SuiteRidge collects, uses, and protects your data.",
-  alternates: { canonical: "/privacy-policy" },
-};
+  path: "/privacy-policy",
+  type: "website",
+});
 
 const lastUpdated = "August 15, 2026";
 

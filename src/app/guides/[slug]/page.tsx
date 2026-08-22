@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema, faqPageSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { guides, getGuide } from "@/lib/content/guides";
 import { getBestList } from "@/lib/content/best";
@@ -20,11 +21,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) return {};
-  return {
+  return buildMetadata({
     title: guide.title,
     description: guide.metaDescription,
-    alternates: { canonical: `/guides/${guide.slug}` },
-  };
+    path: `/guides/${guide.slug}`,
+  });
 }
 
 export default async function GuidePage({

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description: "Get in touch with the SuiteRidge team.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+  type: "website",
+});
 
 export default function ContactPage() {
   return (

@@ -6,6 +6,7 @@ import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { VerdictBox } from "@/components/VerdictBox";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { comparisons, getComparison } from "@/lib/content/comparisons";
 import { getProduct } from "@/lib/content/products";
@@ -22,11 +23,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const comparison = getComparison(slug);
   if (!comparison) return {};
-  return {
+  return buildMetadata({
     title: comparison.title,
     description: comparison.metaDescription,
-    alternates: { canonical: `/compare/${comparison.slug}` },
-  };
+    path: `/compare/${comparison.slug}`,
+  });
 }
 
 export default async function ComparePage({
@@ -69,7 +70,7 @@ export default async function ComparePage({
         {[first, second].map((p) => (
           <div key={p.slug} className="rounded-xl border border-border bg-surface p-6 flex flex-col gap-4">
             <div>
-              <h2 className="font-display font-semibold text-lg">{p.name}</h2>
+              <h3 className="font-display font-semibold text-lg">{p.name}</h3>
               <p className="text-sm text-ink-muted mt-1">{p.startingPrice}</p>
             </div>
             <AffiliateCTA product={p} />

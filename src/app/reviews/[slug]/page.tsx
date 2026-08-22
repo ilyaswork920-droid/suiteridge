@@ -10,6 +10,7 @@ import { MethodologyScores } from "@/components/ScoreBar";
 import { ClaimsList } from "@/components/Callout";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { products, getProduct } from "@/lib/content/products";
 import { comparisons } from "@/lib/content/comparisons";
@@ -28,11 +29,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) return {};
-  return {
+  return buildMetadata({
     title: `${product.name} Review (${new Date(product.pricingLastVerified).getFullYear()})`,
     description: `${product.name} review: pricing, features, pros and cons, and who it's actually built for — verified ${product.pricingLastVerified}.`,
-    alternates: { canonical: `/reviews/${product.slug}` },
-  };
+    path: `/reviews/${product.slug}`,
+  });
 }
 
 export default async function ReviewPage({
