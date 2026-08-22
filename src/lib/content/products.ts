@@ -229,6 +229,74 @@ export const products: Product[] = [
       "HubSpot's free CRM is a legitimate long-term option for a very small team, and Starter is a reasonable way to add basic marketing tools without much added cost. The catch is what comes next: real automation, reporting, and attribution live behind Professional, which carries a materially higher monthly price plus a mandatory five-figure first-year onboarding cost. It's worth deciding whether that depth is actually needed — or whether Mailchimp or ActiveCampaign covers the same ground for meaningfully less — before making the jump.",
   },
   {
+    slug: "kit",
+    name: "Kit",
+    category: "email-marketing",
+    tagline: "Built for creators first — simpler than Mailchimp for newsletters, with built-in product sales.",
+    website: "https://kit.com",
+    pricingLastVerified: "2026-08-22",
+    hasFreePlan: true,
+    startingPrice: "Free (up to 10,000 subscribers) · from $33/mo on Creator",
+    pricing: [
+      {
+        name: "Free (Newsletter)",
+        price: "$0/mo",
+        bestFor: "Newsletter writers and creators just getting started",
+        features: ["Up to 10,000 subscribers", "Unlimited landing pages, forms, and broadcasts", "1 basic automation", "Sell digital products and subscriptions", "Kit branding included"],
+      },
+      {
+        name: "Creator",
+        price: "From $33/mo",
+        billingNote: "Price shown is for up to 1,000 subscribers and increases as your list grows; billed annually saves about 17% ($390/yr)",
+        bestFor: "Creators needing unlimited automation and to remove Kit branding",
+        features: ["Unlimited automations and sequences", "A/B testing", "SMS marketing", "Kit branding removed"],
+      },
+      {
+        name: "Creator Pro",
+        price: "From $66/mo",
+        billingNote: "Price shown is for up to 1,000 subscribers and increases as your list grows; billed annually saves about 17% ($790/yr)",
+        bestFor: "Creators wanting engagement analytics and deliverability reporting",
+        features: ["Subscriber engagement scoring", "Deliverability reporting", "Unlimited team members", "Advanced A/B testing"],
+      },
+    ],
+    whatItDoes:
+      "Kit (formerly ConvertKit) is an email marketing and audience-monetization platform built specifically for individual creators — newsletter writers, YouTubers, and course creators — combining broadcast and automation email with built-in tools for selling digital products, subscriptions, and one-time tips directly to subscribers.",
+    whoItsFor: [
+      "Individual creators, newsletter writers, and course creators rather than traditional small businesses",
+      "Anyone who wants to sell digital products or paid subscriptions to their list without a separate commerce tool",
+      "Creators who want free-tier access up to a genuinely large list size (10,000 subscribers) before paying anything",
+    ],
+    whoShouldAvoid: [
+      "Small businesses needing ecommerce-platform integrations (Shopify, WooCommerce) as a core requirement — Kit is built around creator commerce, not storefront marketing",
+      "Anyone who wants multi-branch marketing automation as a starting point — the free plan includes only one basic automation, with the rest gated to paid tiers",
+      "Teams expecting flat pricing regardless of list size — Creator and Creator Pro both increase in price as subscriber count grows past 1,000",
+    ],
+    keyFeatures: [
+      { text: "Free plan supports up to 10,000 subscribers — the largest free-tier allowance of the email tools covered on this site — with unlimited landing pages, forms, and broadcasts", source: "vendor" },
+      { text: "Digital product and subscription sales (Kit Commerce) are available on every plan, including free, with a 0.6% plus card-processing transaction fee per sale rather than a separate paid add-on", source: "vendor" },
+      { text: "Unlimited automation sequences, A/B testing, and branding removal are gated to the paid Creator tier and above; the free plan includes only one basic automation", source: "vendor" },
+    ],
+    easeOfUse:
+      "Built around a simpler mental model than Mailchimp or ActiveCampaign — sequences and broadcasts are the core building blocks rather than a general-purpose automation canvas — which makes it fast to learn for a single creator managing their own list, at the cost of the deeper branching logic power users get from ActiveCampaign.",
+    pros: [
+      "Free plan covers up to 10,000 subscribers, well beyond what competitors offer for free",
+      "Built-in digital product and subscription sales without a separate ecommerce tool",
+      "Simpler automation model that's faster to learn than ActiveCampaign's workflow builder",
+    ],
+    cons: [
+      "Creator and Creator Pro pricing increases with subscriber count past 1,000, so the real monthly cost at a larger list is higher than the headline price",
+      "Free plan is limited to one basic automation — meaningful automation requires upgrading",
+      "Built around individual creators rather than teams — fewer collaboration and governance features than HubSpot or ActiveCampaign",
+    ],
+    bestUseCases: [
+      "A newsletter writer or course creator who wants to grow past 1,000 subscribers for free before paying anything",
+      "A creator selling digital products or paid subscriptions who wants that built into the same platform as their email list",
+    ],
+    methodologyScores: { featureCoverage: 7, pricingTransparency: 6, easeOfAdoption: 8, smbFit: 6 },
+    verdict:
+      "Kit is the strongest fit on this list for an individual creator rather than a conventional small business — the free plan's 10,000-subscriber ceiling and built-in product sales are hard to match elsewhere. Where it's weaker is exactly where Mailchimp and ActiveCampaign are strongest: ecommerce-platform integrations and deep, branching automation. If the goal is growing and monetizing a personal audience, Kit is worth trying before anything else on this list; if the goal is running email marketing for a traditional small business, Mailchimp or ActiveCampaign remain the better starting point.",
+  },
+  {
     slug: "asana",
     name: "Asana",
     category: "project-management",
