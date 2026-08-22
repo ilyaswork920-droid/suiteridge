@@ -656,6 +656,74 @@ export const products: Product[] = [
     verdict:
       "Acuity is the stronger choice specifically for service businesses selling appointments as a product — packages, memberships, and payments are first-class features, not add-ons. For simple meeting scheduling alone, it's more tool (and more monthly cost) than necessary.",
   },
+  {
+    slug: "square-appointments",
+    name: "Square Appointments",
+    category: "appointment-scheduling",
+    tagline: "Free for a single location and staff member — with payment processing built in from day one.",
+    website: "https://squareup.com/us/en/appointments",
+    pricingLastVerified: "2026-08-22",
+    hasFreePlan: true,
+    startingPrice: "Free (1 staff member, 1 location) · from $49/mo per location on Plus",
+    pricing: [
+      {
+        name: "Free (Solo)",
+        price: "$0/mo",
+        bestFor: "A single practitioner running one location with no staff to manage",
+        features: ["1 staff member, 1 location", "Online booking site", "Appointment reminders", "Client deposits and prepayments", "Online processing fees of 3.3% + 30¢"],
+      },
+      {
+        name: "Plus",
+        price: "From $49/mo per location",
+        billingNote: "Billed per location, not per seat; processing fees drop to 2.5% + 15¢ in-person and 2.9% + 30¢ online",
+        bestFor: "Growing teams needing multiple staff members and class bookings",
+        features: ["Unlimited staff members", "Multi-staff appointment booking", "Waitlist and cancellation policies", "Email marketing included"],
+      },
+      {
+        name: "Premium",
+        price: "From $149/mo per location",
+        billingNote: "Billed per location",
+        bestFor: "Larger salons or practices with complex staff and resource management needs",
+        features: ["Advanced staff management", "Resource scheduling (rooms, equipment)", "Time tracking", "Advanced reporting"],
+      },
+    ],
+    whatItDoes:
+      "Square Appointments is an appointment scheduling and booking platform built on top of Square's payment processing, combining calendar booking, client management, and in-person or online payment collection in one system — aimed at service businesses that already process card payments through Square or want scheduling and payments in the same account.",
+    whoItsFor: [
+      "Solo service providers (barbers, therapists, tutors, personal trainers) who want free scheduling with payments built in, not bolted on",
+      "Businesses already using Square for point-of-sale or payments that want their booking calendar in the same ecosystem",
+      "Growing teams that need multiple staff calendars and are willing to pay per location for that",
+    ],
+    whoShouldAvoid: [
+      "Multi-staff businesses on a tight budget — the free plan is limited to one staff member and one location; Plus removes that limit but costs $49/mo per location",
+      "Anyone not already processing payments through Square — the platform's core value is tightly coupled to Square's payment processing, so a business on a different processor gains less from switching",
+      "Practices needing HIPAA-compliant booking — that's a named strength of Acuity Scheduling's Premium tier, not something Square Appointments advertises",
+    ],
+    keyFeatures: [
+      { text: "Free (Solo) plan is limited to one staff member and one location, with online processing fees of 3.3% + 30¢", source: "vendor" },
+      { text: "Plus ($49/mo per location) removes the staff-member limit and adds multi-staff appointment booking, waitlists, and cancellation policies, with processing fees dropping to 2.5% + 15¢ in-person and 2.9% + 30¢ online", source: "vendor" },
+      { text: "Premium ($149/mo per location) adds advanced staff management, resource scheduling for rooms or equipment, time tracking, and advanced reporting", source: "vendor" },
+    ],
+    easeOfUse:
+      "Straightforward for a solo provider already familiar with Square's payment tools, since booking and payments share one account and dashboard — the tradeoff is that businesses not already in the Square ecosystem have less reason to adopt it over a scheduling-first tool like Calendly or Acuity.",
+    pros: [
+      "Genuinely free tier for a single staff member and location, with no trial time limit",
+      "Payment processing, deposits, and prepayments built into the same account as scheduling",
+      "Per-location (not per-seat) pricing on Plus, so adding staff at one location doesn't raise the bill",
+    ],
+    cons: [
+      "Free plan's one-staff, one-location limit means most growing teams need to upgrade to Plus quickly",
+      "Plus and Premium are billed per location, which can add up faster than a flat team price for multi-location businesses",
+      "Tightly coupled to Square's own payment processing, which is less useful for a business already committed to a different processor",
+    ],
+    bestUseCases: [
+      "A solo barber, stylist, or therapist who wants free booking with payments built in and no separate processor",
+      "A small multi-staff salon or clinic already using Square for payments that wants scheduling in the same account",
+    ],
+    methodologyScores: { featureCoverage: 7, pricingTransparency: 7, easeOfAdoption: 7, smbFit: 7 },
+    verdict:
+      "Square Appointments' clearest advantage is being free for a single staff member and location, with card processing built into the same account rather than a separate integration — a strong fit for a solo provider already using Square for payments. Once a business needs multiple staff, Plus is priced per location rather than per seat, which works in your favor with several staff at one site but adds up quickly across multiple locations. For service businesses focused on packages and memberships specifically, Acuity remains the deeper tool; for pure meeting scheduling, Calendly is simpler. Square Appointments is the strongest pick when payment processing is the deciding factor.",
+  },
 ];
 
 export function getProduct(slug: string): Product | undefined {
