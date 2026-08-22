@@ -71,6 +71,41 @@ export const guides: GuideEntry[] = [
     relatedBestSlug: "appointment-scheduling-software-for-small-business",
     lastVerified: "2026-08-15",
   },
+  {
+    slug: "what-is-project-management-software",
+    category: "project-management",
+    title: "What Is Project Management Software?",
+    metaDescription:
+      "A plain-language explanation of project management software — what it actually replaces, its core building blocks, and when a small team needs one.",
+    intro:
+      "Project management software gives a team one shared place to see what needs to get done, who's doing it, and by when — replacing the mix of spreadsheets, chat threads, and email that most small teams start with.",
+    sections: [
+      {
+        heading: "What it actually replaces",
+        body: "Before adopting a dedicated tool, most small teams track work across a spreadsheet for task lists, a chat app for status updates, and email for anything that needs a paper trail — with no single place showing what's actually in progress or overdue. Project management software consolidates that into one shared view: tasks, owners, due dates, and status in one place instead of scattered across tools.",
+      },
+      {
+        heading: "The core building blocks, regardless of tool",
+        body: "Most project management tools are built from the same handful of primitives: tasks (the unit of work), assignees (who owns it), due dates, and a view — a list, a Kanban board, a calendar, or a timeline — that shows the same underlying tasks in a different shape. Where tools differ is how much configuration those primitives need before they're useful, and how much depth sits on top: automation, dashboards, time tracking, resource planning.",
+      },
+      {
+        heading: "When it's worth adopting",
+        body: "If a team is small (2-3 people) and coordination mostly happens by talking, a dedicated tool can add more overhead than it saves. It starts earning its keep once a team can't reliably answer \"what's everyone working on right now\" without asking, or when work regularly falls through the cracks between tools. The right tool at that point is less about which has the most features and more about matching configuration complexity to how much setup time the team is actually willing to invest.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do I need project management software if my team is small?",
+        answer: "Not necessarily. A team of 2-3 people that coordinates well through direct conversation often doesn't need a dedicated tool yet — the overhead of maintaining a system can exceed the benefit until the team or workload grows enough that things start slipping.",
+      },
+      {
+        question: "What's the difference between a to-do list app and project management software?",
+        answer: "A to-do list tracks individual tasks for one person. Project management software adds shared visibility across a team — who owns what, how tasks relate to each other, and views (boards, timelines) that show status across everyone's work, not just one person's list.",
+      },
+    ],
+    relatedBestSlug: "project-management-software-for-small-business",
+    lastVerified: "2026-08-22",
+  },
 ];
 
 export function getGuide(slug: string): GuideEntry | undefined {
