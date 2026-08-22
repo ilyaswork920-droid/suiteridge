@@ -82,6 +82,15 @@ export interface BestListEntry {
     rank: number;
     oneLinerVerdict: string;
   }[];
+  /** Optional situational breakdown — "which pick is right for you" depth beyond the one-liners. */
+  situations?: { heading: string; body: string }[];
+  /**
+   * Optional at-a-glance comparison table. `values` are aligned by index to
+   * `picks` (in rank order) — sourced from facts already verified on the
+   * underlying product entries, not new claims.
+   */
+  quickCompare?: { label: string; values: string[] }[];
+  faqs?: { question: string; answer: string }[];
   lastVerified: string;
 }
 
