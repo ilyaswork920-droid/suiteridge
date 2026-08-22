@@ -1,7 +1,7 @@
 export function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2">
-      <div className="rounded-xl border border-border bg-surface p-5">
+      <div className="rounded-xl border border-border/60 bg-surface p-5 shadow-[var(--shadow)]">
         <h3 className="font-display font-semibold text-good mb-3">Pros</h3>
         <ul className="space-y-2 text-sm text-ink-muted">
           {pros.map((p) => (
@@ -12,7 +12,7 @@ export function ProsCons({ pros, cons }: { pros: string[]; cons: string[] }) {
           ))}
         </ul>
       </div>
-      <div className="rounded-xl border border-border bg-surface p-5">
+      <div className="rounded-xl border border-border/60 bg-surface p-5 shadow-[var(--shadow)]">
         <h3 className="font-display font-semibold text-low mb-3">Cons</h3>
         <ul className="space-y-2 text-sm text-ink-muted">
           {cons.map((c) => (

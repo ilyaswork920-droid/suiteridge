@@ -8,8 +8,8 @@ const labels: Record<SourceType, string> = {
 
 const styles: Record<SourceType, string> = {
   vendor: "bg-accent-soft text-accent",
-  editorial: "bg-surface-alt text-ink-muted border border-border",
-  user: "bg-surface-alt text-ink-muted border border-border",
+  editorial: "bg-surface-alt text-ink-muted border border-border/70",
+  user: "bg-surface-alt text-ink-muted border border-border/70",
 };
 
 export function SourceTag({ type }: { type: SourceType }) {

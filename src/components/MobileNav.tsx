@@ -14,7 +14,7 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center justify-center rounded-full border border-border w-10 h-10 text-ink"
+        className="inline-flex items-center justify-center rounded-full border border-border w-10 h-10 text-ink transition-colors hover:border-accent/70 hover:bg-surface-alt"
       >
         <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
         {open ? (
@@ -31,7 +31,7 @@ export function MobileNav() {
       {open && (
         <div
           id="mobile-nav-panel"
-          className="absolute left-0 right-0 top-16 border-b border-border bg-surface px-4 py-4 shadow-lg"
+          className="absolute left-0 right-0 top-16 border-b border-border bg-surface px-4 py-4 shadow-[var(--shadow)]"
         >
           <nav aria-label="Mobile" className="flex flex-col gap-1">
             {categoryList.map((c) => (

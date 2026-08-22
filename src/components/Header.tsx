@@ -21,7 +21,7 @@ export function Header() {
         </nav>
         <Link
           href="#categories"
-          className="hidden sm:inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-medium hover:border-accent hover:text-accent transition-colors shrink-0"
+          className="hidden sm:inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors hover:border-accent/70 hover:text-accent hover:bg-surface-alt shrink-0"
         >
           Browse categories
         </Link>

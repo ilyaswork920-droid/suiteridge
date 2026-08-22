@@ -23,13 +23,13 @@ export default function HomePage() {
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="#categories"
-            className="inline-flex items-center rounded-full bg-accent text-accent-ink px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
+            className="inline-flex items-center rounded-full bg-accent text-accent-ink px-6 py-3 text-sm font-semibold shadow-[var(--shadow)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
           >
             Browse categories
           </a>
           <Link
             href="/methodology"
-            className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium hover:border-accent hover:text-accent transition-colors"
+            className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-accent/70 hover:text-accent hover:bg-surface-alt"
           >
             Read our methodology
           </Link>

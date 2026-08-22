@@ -58,7 +58,7 @@ export default function MethodologyPage() {
         ))}
       </div>
 
-      <div className="rounded-xl border border-border bg-surface-alt p-6 mb-8">
+      <div className="rounded-xl border border-border/60 bg-surface-alt p-6 mb-8 shadow-[var(--shadow)]">
         <h2 className="font-display font-semibold text-lg mb-3">How claims are labeled</h2>
         <p className="text-sm text-ink-muted mb-4">
           Every factual claim in a review carries one of three labels, so you always know where it

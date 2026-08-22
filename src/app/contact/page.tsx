@@ -19,7 +19,7 @@ export default function ContactPage() {
         breadcrumbs={[{ name: "Contact", href: "/contact" }]}
       />
       <div className="flex flex-col gap-6 text-ink-muted leading-relaxed">
-        <div className="rounded-xl border border-border bg-surface p-6">
+        <div className="rounded-xl border border-border/60 bg-surface p-6 shadow-[var(--shadow)]">
           <h2 className="font-display font-semibold text-lg mb-2 text-ink">General &amp; editorial</h2>
           <p className="text-sm">
             Spotted outdated pricing, a factual error, or want to suggest a product for review?
@@ -28,7 +28,7 @@ export default function ContactPage() {
             {siteConfig.contactEmail}
           </a>
         </div>
-        <div className="rounded-xl border border-border bg-surface p-6">
+        <div className="rounded-xl border border-border/60 bg-surface p-6 shadow-[var(--shadow)]">
           <h2 className="font-display font-semibold text-lg mb-2 text-ink">Vendors &amp; partnerships</h2>
           <p className="text-sm">
             SuiteRidge&apos;s rankings are governed by our published methodology and are not

@@ -3,7 +3,7 @@ import type { PricingTier } from "@/lib/types";
 export function PricingTable({ tiers, lastVerified }: { tiers: PricingTier[]; lastVerified: string }) {
   return (
     <div>
-      <div className="overflow-x-auto rounded-xl border border-border">
+      <div className="overflow-x-auto rounded-xl border border-border/60 shadow-[var(--shadow)]">
         <table className="w-full text-sm min-w-[560px]">
           <thead>
             <tr className="bg-surface-alt text-left">

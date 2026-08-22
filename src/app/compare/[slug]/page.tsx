@@ -68,7 +68,7 @@ export default async function ComparePage({
 
       <div className="grid gap-6 sm:grid-cols-2 mb-10">
         {[first, second].map((p) => (
-          <div key={p.slug} className="rounded-xl border border-border bg-surface p-6 flex flex-col gap-4">
+          <div key={p.slug} className="rounded-xl border border-border/60 bg-surface p-6 flex flex-col gap-4 shadow-[var(--shadow)]">
             <div>
               <h3 className="font-display font-semibold text-lg">{p.name}</h3>
               <p className="text-sm text-ink-muted mt-1">{p.startingPrice}</p>

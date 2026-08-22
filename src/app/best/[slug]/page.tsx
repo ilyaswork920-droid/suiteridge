@@ -67,7 +67,7 @@ export default async function BestListPage({
 
       <div className="flex flex-col gap-6">
         {picks.map(({ rank, oneLinerVerdict, product }) => (
-          <div key={product.slug} className="rounded-xl border border-border bg-surface p-6 sm:p-7">
+          <div key={product.slug} className="rounded-xl border border-border/60 bg-surface p-6 sm:p-7 shadow-[var(--shadow)]">
             <div className="flex items-start justify-between gap-4 mb-3">
               <div>
                 <span className="font-mono text-xs text-accent uppercase tracking-wider">#{rank} Pick</span>

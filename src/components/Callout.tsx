@@ -3,8 +3,8 @@ import { SourceTag } from "@/components/SourceTag";
 export function Callout({ children, tone = "default" }: { children: React.ReactNode; tone?: "default" | "risk" }) {
   return (
     <div
-      className={`rounded-xl border p-5 text-sm text-ink-muted ${
-        tone === "risk" ? "border-low/40 bg-low/5" : "border-border bg-surface-alt"
+      className={`rounded-xl border p-5 text-sm text-ink-muted shadow-[var(--shadow)] ${
+        tone === "risk" ? "border-low/40 bg-low/5" : "border-border/60 bg-surface-alt"
       }`}
     >
       {children}

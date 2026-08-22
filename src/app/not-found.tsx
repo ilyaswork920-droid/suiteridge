@@ -15,7 +15,7 @@ export default function NotFound() {
           <Link
             key={c.slug}
             href={`/categories/${c.slug}`}
-            className="rounded-xl border border-border bg-surface p-4 hover:border-accent transition-colors"
+            className="rounded-xl border border-border/60 bg-surface p-4 shadow-[var(--shadow)] transition-all duration-200 hover:border-accent/60 hover:-translate-y-0.5"
           >
             <span className="font-display font-semibold">{c.shortName}</span>
           </Link>

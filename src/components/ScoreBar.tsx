@@ -25,7 +25,7 @@ export function MethodologyScores({
   scores: { featureCoverage: number; pricingTransparency: number; easeOfAdoption: number; smbFit: number };
 }) {
   return (
-    <div className="flex flex-col gap-2.5 rounded-xl border border-border bg-surface p-5">
+    <div className="flex flex-col gap-2.5 rounded-xl border border-border/60 bg-surface p-5 shadow-[var(--shadow)]">
       <ScoreBar label="Feature coverage" score={scores.featureCoverage} />
       <ScoreBar label="Pricing transparency" score={scores.pricingTransparency} />
       <ScoreBar label="Ease of adoption" score={scores.easeOfAdoption} />

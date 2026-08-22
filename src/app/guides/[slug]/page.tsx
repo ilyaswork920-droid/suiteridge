@@ -78,7 +78,7 @@ export default async function GuidePage({
         <h2 className="font-display font-semibold text-xl mb-5">Frequently asked questions</h2>
         <div className="flex flex-col gap-5">
           {guide.faqs.map((f) => (
-            <div key={f.question} className="rounded-xl border border-border bg-surface p-5">
+            <div key={f.question} className="rounded-xl border border-border/60 bg-surface p-5 shadow-[var(--shadow)]">
               <h3 className="font-semibold mb-2">{f.question}</h3>
               <p className="text-sm text-ink-muted">{f.answer}</p>
             </div>

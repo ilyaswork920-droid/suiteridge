@@ -1,6 +1,6 @@
 export function Newsletter() {
   return (
-    <div className="rounded-2xl border border-border bg-surface-alt p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+    <div className="rounded-2xl border border-border/60 bg-surface-alt p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 shadow-[var(--shadow)]">
       <div className="flex-1">
         <h2 className="font-display text-xl font-semibold mb-1.5">Stay ahead of pricing changes</h2>
         <p className="text-sm text-ink-muted">New reviews and pricing updates, about once a month. No spam.</p>
@@ -22,7 +22,7 @@ export function Newsletter() {
         />
         <button
           type="submit"
-          className="rounded-full bg-accent text-accent-ink px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+          className="rounded-full bg-accent text-accent-ink px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:brightness-110 whitespace-nowrap"
         >
           Subscribe
         </button>

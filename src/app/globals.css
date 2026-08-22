@@ -1,37 +1,27 @@
 @import "tailwindcss";
 
+/*
+ * SuiteRidge is a deliberately dark, editorial brand — this palette is
+ * unconditional, not an OS dark-mode fallback. Every visitor sees the
+ * same deep-charcoal identity regardless of their system preference,
+ * the way Linear/Vercel/Raycast commit to one brand-defining look.
+ */
 :root {
-  --background: #f5f3ec;
-  --surface: #ffffff;
-  --surface-alt: #ece7d9;
-  --ink: #1c2119;
-  --ink-muted: #5c594c;
-  --ink-faint: #8a8674;
-  --accent: #2f5d4e;
-  --accent-ink: #eaf2ed;
-  --accent-soft: #dee8e1;
-  --border: #dcd5c2;
-  --good: #2f6d4c;
-  --warn: #9c6a22;
-  --low: #a6503c;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141813;
-    --surface: #1c2219;
-    --surface-alt: #232b21;
-    --ink: #ece8db;
-    --ink-muted: #a9a491;
-    --ink-faint: #726e5e;
-    --accent: #74c4a3;
-    --accent-ink: #0f1912;
-    --accent-soft: #243a30;
-    --border: #333a2e;
-    --good: #74c4a3;
-    --warn: #e0ae63;
-    --low: #e08a73;
-  }
+  --background: #15161a;
+  --surface: #1c1e22;
+  --surface-alt: #212429;
+  --ink: #ece8de;
+  --ink-muted: #a6a296;
+  --ink-faint: #8a867b;
+  --accent: #4f9d7e;
+  --accent-ink: #0e1912;
+  --accent-soft: #21322b;
+  --border: #2b2e34;
+  --good: #5fb08d;
+  --warn: #c99a52;
+  --low: #c17862;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
 }
 
 @theme inline {

@@ -14,7 +14,7 @@ export function LinkCard({
   return (
     <Link
       href={href}
-      className="group flex flex-col gap-2 rounded-xl border border-border bg-surface p-5 hover:border-accent transition-colors"
+      className="group flex flex-col gap-2 rounded-xl border border-border/60 bg-surface p-5 shadow-[var(--shadow)] transition-all duration-200 hover:border-accent/60 hover:-translate-y-0.5"
     >
       {eyebrow && (
         <span className="font-mono text-[0.65rem] uppercase tracking-wider text-accent">{eyebrow}</span>

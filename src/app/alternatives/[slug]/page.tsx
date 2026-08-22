@@ -87,7 +87,7 @@ export default async function AlternativesPage({
         <h2 className="font-display font-semibold text-xl mb-5">The alternatives</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           {alternatives.map((p) => (
-            <div key={p.slug} className="rounded-xl border border-border bg-surface p-6 flex flex-col gap-3">
+            <div key={p.slug} className="rounded-xl border border-border/60 bg-surface p-6 flex flex-col gap-3 shadow-[var(--shadow)]">
               <h3 className="font-display font-semibold text-lg">{p.name}</h3>
               <p className="text-sm text-ink-muted">{p.tagline}</p>
               <p className="text-sm text-ink-faint">{p.startingPrice}</p>
