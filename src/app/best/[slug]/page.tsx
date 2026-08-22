@@ -227,6 +227,19 @@ export default async function BestListPage({
         </div>
       )}
 
+      {picks.length > 1 && list.showBottomCta && (
+        <section className="mt-12 mb-2">
+          <h2 className="font-display font-semibold text-lg mb-4">Ready to pick one?</h2>
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            {picks.map(({ product }) => (
+              <div key={product.slug} className="flex-1 min-w-[220px]">
+                <AffiliateCTA product={product} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {list.faqs && list.faqs.length > 0 && (
         <p className="mt-10 text-xs text-ink-faint">
           More {category.shortName.toLowerCase()} tools are being added to this shortlist as we complete full reviews — see the{" "}

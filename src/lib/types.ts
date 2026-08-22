@@ -97,8 +97,15 @@ export interface BestListEntry {
    */
   quickCompare?: { label: string; values: string[] }[];
   faqs?: { question: string; answer: string }[];
-  /** Genuine cross-links to a sibling best-list page covering an adjacent, distinct intent. */
+  /** Genuine cross-links to a sibling best-list page or guide covering an adjacent, distinct intent. */
   relatedLinks?: { label: string; href: string }[];
+  /**
+   * Explicit opt-in for a condensed second-CTA block after the FAQ, for
+   * multi-pick pages that have grown long enough to need one. Kept as an
+   * explicit flag (rather than inferred from picks.length or faqs) so
+   * adding it to one page can never silently affect another.
+   */
+  showBottomCta?: boolean;
   lastVerified: string;
 }
 

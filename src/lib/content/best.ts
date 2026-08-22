@@ -9,8 +9,18 @@ export const bestLists: BestListEntry[] = [
     metaDescription:
       "A situational shortlist of email marketing software for small businesses, based on list size, automation needs, and pricing transparency — not a generic top-10.",
     intro:
-      "There is no single \"best\" email marketing tool — there's a best tool for your list size and how much automation you actually need. This page starts with the two situations that cover most small businesses; if yours is more specific, see the situational guides linked below.",
+      "There is no single \"best\" email marketing software for every small business — there's a best tool for your list size and how much automation you actually need. This page starts with the two situations that cover most small businesses; if yours is more specific, see the situational guides linked below.",
     situation: "General small business, list under a few thousand contacts, without heavy automation needs.",
+    whatToLookFor: {
+      heading: "What to look for in email marketing software",
+      items: [
+        "How pricing scales as your contact list grows — contact-based tiers can escalate faster than the headline price suggests",
+        "Whether you need simple broadcast sending or true behavior-triggered automation (cart abandonment, lead nurture)",
+        "Native integrations with your ecommerce platform, if you're selling online",
+        "How much setup time you're realistically willing to invest before your first campaign goes out",
+        "Whether CRM-lite features (deal tracking, contact scoring) are worth bundling in, or better handled separately",
+      ],
+    },
     picks: [
       {
         productSlug: "mailchimp",
@@ -23,7 +33,67 @@ export const bestLists: BestListEntry[] = [
         oneLinerVerdict: "Choose this instead if behavioral automation is a real requirement, not a nice-to-have.",
       },
     ],
-    lastVerified: "2026-08-15",
+    whoShouldLookElsewhere: [
+      "You expect to scale past several thousand contacts quickly — Mailchimp's contact-based pricing accelerates fast at that range, so it's worth budgeting for your expected list size, not today's, before committing.",
+      "You're a solo creator or newsletter publisher rather than a business with products or services to sell — both picks here are built more around commercial sending (ecommerce automation, lead nurture, behavioral targeting) than personal publishing. That's a distinct enough use case that it deserves its own guide rather than being force-fit here.",
+      "You want real automation on day one with no learning curve — ActiveCampaign's automation builder has genuine depth, which means genuine setup time; if that's a dealbreaker and Mailchimp's automation ceiling isn't enough either, neither pick here is the right fit yet.",
+    ],
+    situations: [
+      {
+        heading: "Sending your first few campaigns",
+        body: "Mailchimp's drag-and-drop builder, large template library, and genuinely usable free plan make it the lowest-friction way to get a first newsletter out — most first-time senders can launch a campaign within an hour.",
+      },
+      {
+        heading: "You've outgrown broadcast-only sending",
+        body: "Once the goal is behavior-triggered sequences — welcome series, cart abandonment, lead nurture based on what a contact actually does — ActiveCampaign's visual automation builder is the deeper tool, at the cost of real setup time.",
+      },
+      {
+        heading: "Running email alongside ecommerce",
+        body: "Mailchimp's native integrations lean toward ecommerce platforms specifically, which matters if most of your sending is order confirmations, abandoned-cart nudges, and post-purchase follow-ups layered onto a store you already run.",
+      },
+    ],
+    quickCompare: [
+      { label: "Starting price", values: ["Free (500 contacts) · from $13/mo on Essentials", "From $15/mo (Starter, billed annually)"] },
+      { label: "Free plan", values: ["Yes", "No — trial only"] },
+      { label: "Automation depth", values: ["Basic; deeper tiers gated to Standard+", "The deepest automation builder in this category"] },
+      { label: "Learning curve", values: ["Lowest — same-day launch typical", "Steeper — real setup investment"] },
+      { label: "Best for", values: ["First-time senders, simple sending needs", "Behavior-triggered automation, CRM-lite needs"] },
+    ],
+    howToChoose: {
+      heading: "How to choose email marketing software",
+      items: [
+        "Do you need to launch a campaign today, or can you invest setup time for deeper automation later?",
+        "Is your list under a few thousand contacts, or do you expect to scale quickly?",
+        "Do you need CRM-lite features (deal tracking, pipelines) bundled in, or is email enough on its own?",
+        "Are you running ecommerce and need cart-abandonment or post-purchase automation specifically?",
+      ],
+    },
+    faqs: [
+      {
+        question: "Does email marketing software integrate with ecommerce platforms like Shopify?",
+        answer: "Mailchimp specifically has a wide range of native integrations leaning toward ecommerce platforms, which is worth checking directly against your specific platform before assuming coverage. ActiveCampaign's ecommerce automation (cart abandonment, post-purchase flows) is a core strength once you're past its setup phase.",
+      },
+      {
+        question: "Is email marketing software priced per contact or per feature?",
+        answer: "Often both. Mailchimp's four tiers (Free, Essentials, Standard, Premium) scale by contact count, with meaningful automation features gated behind Standard and above. ActiveCampaign's pricing is also contact-based, but split across separate Email, WhatsApp, and Cross-Channel product lines — worth deciding which product line you actually need before comparing headline prices.",
+      },
+      {
+        question: "Is Mailchimp's free plan actually usable, or is it just a trial?",
+        answer: "It's a genuine free plan, not a time-limited trial — covering up to 500 contacts and 1,000 sends a month indefinitely. The tradeoff is limited automation, which is why growing lists tend to move to a paid tier.",
+      },
+      {
+        question: "Do I need a separate CRM if I use ActiveCampaign?",
+        answer: "Not necessarily — CRM and sales-pipeline features are included from the Plus tier up, so a small team can get lightweight deal tracking without adding a separate tool. Mailchimp doesn't offer this; it's an email-and-light-ecommerce platform rather than a CRM-adjacent one.",
+      },
+    ],
+    relatedLinks: [
+      {
+        label: "Not sure you need automation at all? See our guide: What Is Email Marketing Automation?",
+        href: "/guides/what-is-email-marketing-automation",
+      },
+    ],
+    showBottomCta: true,
+    lastVerified: "2026-08-22",
   },
   {
     slug: "project-management-software-for-small-business",
