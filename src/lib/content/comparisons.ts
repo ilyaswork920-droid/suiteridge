@@ -48,6 +48,29 @@ export const comparisons: ComparisonEntry[] = [
     lastVerified: "2026-08-22",
   },
   {
+    slug: "kit-vs-mailchimp",
+    category: "email-marketing",
+    productSlugs: ["kit", "mailchimp"],
+    title: "Kit vs Mailchimp",
+    metaDescription:
+      "Kit vs Mailchimp compared on free-plan limits, creator commerce, and who each is actually built for — with a clear verdict for each situation.",
+    intro:
+      "Both are approachable, beginner-friendly email tools, but they're built for different senders. Kit is built around individual creators monetizing an audience — newsletters, courses, digital products. Mailchimp is built around small businesses and light ecommerce marketing, with a much smaller free tier.",
+    chooseFirstIf: [
+      "You're an individual creator, newsletter writer, or course creator rather than a conventional small business",
+      "You want to sell digital products or subscriptions to your list without adding a separate commerce tool",
+      "You want free-tier access up to a much larger list (10,000 subscribers vs Mailchimp's 500) before paying anything",
+    ],
+    chooseSecondIf: [
+      "You're a small business, especially one selling physical products through an ecommerce platform",
+      "You want the widest range of native ecommerce integrations rather than a creator-commerce feature set",
+      "You prefer Mailchimp's more familiar small-business positioning over Kit's creator-specific tools and pricing",
+    ],
+    verdict:
+      "The deciding factor here is who's actually sending the email, not which tool is \"better.\" An individual creator monetizing an audience gets more free runway and built-in commerce tools from Kit. A small business selling through an ecommerce platform gets wider store integrations from Mailchimp. Picking based on price alone misses the point — these two are built for different jobs that both happen to start with \"send an email.\"",
+    lastVerified: "2026-08-22",
+  },
+  {
     slug: "asana-vs-clickup",
     category: "project-management",
     productSlugs: ["asana", "clickup"],
