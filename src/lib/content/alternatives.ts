@@ -19,6 +19,23 @@ export const alternativesEntries: AlternativesEntry[] = [
     lastVerified: "2026-08-15",
   },
   {
+    slug: "monday",
+    category: "project-management",
+    ofProductSlug: "monday",
+    title: "monday.com Alternatives",
+    metaDescription:
+      "The best monday.com alternatives for small teams that have hit its seat-bucket pricing or want a less configuration-heavy tool.",
+    intro:
+      "Most monday.com alternative searches come down to one of two frustrations: the seat-bucket pricing rounded the bill up more than expected, or the board setup took longer to configure than the team wanted to invest. Worth switching for one of those reasons, not just because a competitor's homepage looks different.",
+    reasonsToSwitch: [
+      "Your team size doesn't cleanly fit monday.com's seat buckets (3, 5, 10, 15...), so you're paying for unused seats",
+      "You want a tool that's productive out of the box, without configuring boards, automations, and views first",
+      "You want per-exact-seat billing instead of bucket-based pricing",
+    ],
+    alternativeSlugs: ["asana", "clickup"],
+    lastVerified: "2026-08-22",
+  },
+  {
     slug: "calendly",
     category: "appointment-scheduling",
     ofProductSlug: "calendly",
