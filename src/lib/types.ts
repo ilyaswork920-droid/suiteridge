@@ -84,6 +84,12 @@ export interface BestListEntry {
   }[];
   /** Optional situational breakdown — "which pick is right for you" depth beyond the one-liners. */
   situations?: { heading: string; body: string }[];
+  /** Optional feature checklist rendered before the picks — "what this category actually needs to do." */
+  whatToLookFor?: { heading: string; items: string[] };
+  /** Optional honest caveats — who the top pick(s) aren't a good fit for, sourced from already-verified product facts. */
+  whoShouldLookElsewhere?: string[];
+  /** Optional decision framework rendered after pricing/situations, before FAQ. */
+  howToChoose?: { heading: string; items: string[] };
   /**
    * Optional at-a-glance comparison table. `values` are aligned by index to
    * `picks` (in rank order) — sourced from facts already verified on the
@@ -91,6 +97,8 @@ export interface BestListEntry {
    */
   quickCompare?: { label: string; values: string[] }[];
   faqs?: { question: string; answer: string }[];
+  /** Genuine cross-links to a sibling best-list page covering an adjacent, distinct intent. */
+  relatedLinks?: { label: string; href: string }[];
   lastVerified: string;
 }
 

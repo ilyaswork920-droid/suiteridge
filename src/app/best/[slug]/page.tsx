@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { PricingTable } from "@/components/PricingTable";
 import { JsonLd } from "@/components/JsonLd";
-import { itemListSchema, faqPageSchema } from "@/lib/schema";
+import { itemListSchema, faqPageSchema, articleSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { categoryList, siteConfig } from "@/lib/site-config";
 import { bestLists, getBestList } from "@/lib/content/best";
@@ -47,9 +48,17 @@ export default async function BestListPage({
     <article className="mx-auto max-w-3xl px-4 sm:px-6 py-10">
       <JsonLd
         data={[
-          itemListSchema(
-            picks.map((p) => ({ name: p.product.name, url: `${siteConfig.url}/reviews/${p.product.slug}` }))
-          ),
+          picks.length > 1
+            ? itemListSchema(
+                picks.map((p) => ({ name: p.product.name, url: `${siteConfig.url}/reviews/${p.product.slug}` }))
+              )
+            : articleSchema({
+                headline: list.title,
+                description: list.metaDescription,
+                url: `${siteConfig.url}/best/${list.slug}`,
+                datePublished: list.lastVerified,
+                dateModified: list.lastVerified,
+              }),
           ...(list.faqs && list.faqs.length > 0 ? [faqPageSchema(list.faqs)] : []),
         ]}
       />
@@ -64,9 +73,35 @@ export default async function BestListPage({
         lastVerified={list.lastVerified}
       />
 
-      <p className="text-sm text-ink-faint mb-8 -mt-4">
+      <p className="text-sm text-ink-faint mb-4 -mt-4">
         Situation covered here: <span className="text-ink-muted">{list.situation}</span>
       </p>
+
+      {list.relatedLinks && list.relatedLinks.length > 0 && (
+        <div className="mb-8 flex flex-col gap-2">
+          {list.relatedLinks.map((r) => (
+            <p key={r.href} className="text-sm text-ink-faint">
+              <Link href={r.href} className="text-accent hover:underline">
+                {r.label}
+              </Link>
+            </p>
+          ))}
+        </div>
+      )}
+
+      {list.whatToLookFor && (
+        <section className="mb-10">
+          <h2 className="font-display font-semibold text-xl mb-4">{list.whatToLookFor.heading}</h2>
+          <ul className="space-y-2 text-sm text-ink-muted">
+            {list.whatToLookFor.items.map((item) => (
+              <li key={item} className="flex gap-2">
+                <span className="text-accent" aria-hidden="true">&bull;</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <div className="flex flex-col gap-6">
         {picks.map(({ rank, oneLinerVerdict, product }) => (
@@ -89,9 +124,25 @@ export default async function BestListPage({
         ))}
       </div>
 
+      {list.whoShouldLookElsewhere && list.whoShouldLookElsewhere.length > 0 && (
+        <section className="mt-10">
+          <h2 className="font-display font-semibold text-lg mb-4">Who should look elsewhere</h2>
+          <ul className="space-y-2 text-sm text-ink-muted">
+            {list.whoShouldLookElsewhere.map((point) => (
+              <li key={point} className="flex gap-2">
+                <span className="text-low" aria-hidden="true">&bull;</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {list.situations && list.situations.length > 0 && (
         <section className="mt-12">
-          <h2 className="font-display font-semibold text-xl mb-5">Which one is right for you?</h2>
+          <h2 className="font-display font-semibold text-xl mb-5">
+            {picks.length === 1 ? `Which ${picks[0].product.name} plan fits your situation?` : "Which one is right for you?"}
+          </h2>
           <div className="flex flex-col gap-6">
             {list.situations.map((s) => (
               <div key={s.heading}>
@@ -100,6 +151,27 @@ export default async function BestListPage({
               </div>
             ))}
           </div>
+        </section>
+      )}
+
+      {picks.length === 1 && (
+        <section className="mt-12">
+          <h2 className="font-display font-semibold text-xl mb-5">{picks[0].product.name} Pricing at a Glance</h2>
+          <PricingTable tiers={picks[0].product.pricing} lastVerified={picks[0].product.pricingLastVerified} />
+        </section>
+      )}
+
+      {list.howToChoose && (
+        <section className="mt-12">
+          <h2 className="font-display font-semibold text-xl mb-5">{list.howToChoose.heading}</h2>
+          <ul className="space-y-2 text-sm text-ink-muted">
+            {list.howToChoose.items.map((item) => (
+              <li key={item} className="flex gap-2">
+                <span className="text-accent" aria-hidden="true">&bull;</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 
@@ -147,6 +219,12 @@ export default async function BestListPage({
             ))}
           </div>
         </section>
+      )}
+
+      {picks.length === 1 && (
+        <div className="mt-12 mb-2">
+          <AffiliateCTA product={picks[0].product} />
+        </div>
       )}
 
       {list.faqs && list.faqs.length > 0 && (

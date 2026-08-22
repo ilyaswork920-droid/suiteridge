@@ -110,7 +110,94 @@ export const bestLists: BestListEntry[] = [
         answer: "Differently for each. Calendly's Teams plan is priced per seat, though volume pricing kicks in once a team passes 30 users. Acuity Scheduling's tiers are structured around features rather than per-seat pricing, but its entry Starter tier is built around a single bookable calendar — worth checking current plan details before assuming multi-staff pricing on either.",
       },
     ],
+    relatedLinks: [
+      {
+        label: "Already know you're selling appointments, not just booking meetings? See our online booking software guide for service businesses",
+        href: "/best/online-booking-software-for-service-businesses",
+      },
+    ],
     lastVerified: "2026-08-15",
+  },
+  {
+    slug: "online-booking-software-for-service-businesses",
+    category: "appointment-scheduling",
+    isPillar: false,
+    title: "Best Online Booking Software for Service Businesses",
+    metaDescription:
+      "Online booking software for service businesses needs to do more than share a calendar — it needs to handle payments, packages, and client self-service. Here's how to choose, and our top pick.",
+    intro:
+      "If you're just trying to stop the back-and-forth over meeting times, you want a scheduling link, not booking software — see our appointment scheduling guide instead. This page is for a narrower, more specific job: letting clients book and pay for an appointment, class, or package without you handling it manually.",
+    situation: "Service businesses (salons, studios, clinics, coaches) selling appointments as a product, not just booking meetings.",
+    whatToLookFor: {
+      heading: "What online booking software needs to do for a service business",
+      items: [
+        "Collect payment at the time of booking, not as a separate manual step afterward",
+        "Support packages, class passes, or memberships — not just single one-off appointments",
+        "Send automated reminders (SMS and/or email) to cut down on no-shows",
+        "Sync with your existing calendar rather than replacing it",
+        "Offer compliance features like HIPAA support if you're in a regulated field",
+      ],
+    },
+    picks: [
+      {
+        productSlug: "acuity-scheduling",
+        rank: 1,
+        oneLinerVerdict: "Built specifically for this job — packages, memberships, and payment collection are core features, not add-ons.",
+      },
+    ],
+    whoShouldLookElsewhere: [
+      "You want to try before you commit — Acuity has no free plan, only a 7-day trial across its paid tiers. If you need longer than that to test it properly, factor that in.",
+      "You're only taking a handful of appointments a week and aren't selling packages or collecting payment through the booking flow yet — the features that make Acuity worth it (SMS reminders, packages, payment collection) start at the Standard tier, so a free scheduling link may cover you until you actually need them.",
+    ],
+    situations: [
+      {
+        heading: "A solo practitioner with one calendar",
+        body: "Acuity's Starter tier is built around a single bookable calendar — the right fit if it's just you taking appointments, without needing SMS reminders or package sales yet.",
+      },
+      {
+        heading: "Selling packages, class passes, or memberships",
+        body: "The Standard tier is where Acuity's core service-business features unlock: SMS reminders, packages, payment plans, and memberships, plus payment collection via Stripe, Square, or PayPal.",
+      },
+      {
+        heading: "A HIPAA-regulated healthcare or wellness practice",
+        body: "HIPAA-appropriate booking is reserved for Acuity's Premium tier, alongside additional security controls — worth confirming this is the specific compliance level your practice needs before assuming a lower tier covers it.",
+      },
+    ],
+    howToChoose: {
+      heading: "How to choose online booking software",
+      items: [
+        "Do you need to collect payment at the moment of booking, or is invoicing separately fine?",
+        "Do you sell packages, class passes, or memberships, or only single appointments?",
+        "Is it one calendar, or do you need multiple staff members or locations?",
+        "Do you need HIPAA-appropriate booking for a regulated practice?",
+        "How much do no-shows cost you — is automated SMS reminders worth paying for?",
+      ],
+    },
+    faqs: [
+      {
+        question: "Does Acuity Scheduling cost less if I pay annually?",
+        answer: "Yes — every tier has a lower annual-billed price than its monthly equivalent, roughly a 20% saving across the board. The Starter tier, for example, is $16/month billed annually versus $20/month billed monthly, and the same ratio holds at Standard and Premium.",
+      },
+      {
+        question: "Which payment processors does online booking software typically integrate with?",
+        answer: "Acuity Scheduling collects payment through Stripe, Square, or PayPal, built into the booking flow from its Standard tier up — clients pay when they book rather than being invoiced separately afterward.",
+      },
+      {
+        question: "Do I need a HIPAA-compliant booking tool for my practice?",
+        answer: "Only if you're in a regulated healthcare or wellness field handling protected client information through the booking flow. Acuity reserves HIPAA-appropriate features for its Premium tier — it's not included by default on lower tiers.",
+      },
+      {
+        question: "Why doesn't Acuity Scheduling offer a free plan?",
+        answer: "Acuity offers a 7-day trial across its paid tiers rather than an ongoing free plan. Tools built around payment collection and package sales tend to skip free tiers more often than pure scheduling links do, since the core value (getting paid) only applies once you're a paying business anyway.",
+      },
+    ],
+    relatedLinks: [
+      {
+        label: "Just need to book meetings, not sell appointments? See our appointment scheduling software guide",
+        href: "/best/appointment-scheduling-software-for-small-business",
+      },
+    ],
+    lastVerified: "2026-08-22",
   },
 ];
 
