@@ -297,6 +297,74 @@ export const products: Product[] = [
       "Kit is the strongest fit on this list for an individual creator rather than a conventional small business — the free plan's 10,000-subscriber ceiling and built-in product sales are hard to match elsewhere. Where it's weaker is exactly where Mailchimp and ActiveCampaign are strongest: ecommerce-platform integrations and deep, branching automation. If the goal is growing and monetizing a personal audience, Kit is worth trying before anything else on this list; if the goal is running email marketing for a traditional small business, Mailchimp or ActiveCampaign remain the better starting point.",
   },
   {
+    slug: "klaviyo",
+    name: "Klaviyo",
+    category: "email-marketing",
+    tagline: "Built specifically for ecommerce — predictive analytics from real purchase data, at a price tied to list size.",
+    website: "https://www.klaviyo.com",
+    pricingLastVerified: "2026-08-22",
+    hasFreePlan: true,
+    startingPrice: "Free (up to 250 profiles) · from $20/mo on Email",
+    pricing: [
+      {
+        name: "Free",
+        price: "$0/mo",
+        bestFor: "Very new or small stores testing ecommerce-specific email marketing",
+        features: ["Up to 250 active profiles", "500 emails/month", "$5 of mobile messages/month", "10,000 Composer (AI) credits", "Built-in reporting"],
+      },
+      {
+        name: "Email",
+        price: "From $20/mo",
+        billingNote: "Price is for 251-500 active profiles and scales with profile count as your list grows; sends are unlimited on paid tiers",
+        bestFor: "Ecommerce stores ready for unlimited sends and full automation flows",
+        features: ["Unlimited email sends", "Full segmentation and automation flows", "Predictive analytics (churn risk, expected lifetime value, send-time optimization)"],
+      },
+      {
+        name: "Email + SMS",
+        price: "From $35/mo",
+        billingNote: "Price is for 251-500 active profiles and includes 1,250 SMS/MMS credits; scales with profile count, and additional SMS credits are billed separately",
+        bestFor: "Ecommerce stores wanting SMS and email managed in one platform",
+        features: ["Everything in the Email plan", "1,250 SMS/MMS credits included", "Two-way SMS conversations"],
+      },
+    ],
+    whatItDoes:
+      "Klaviyo is an email and SMS marketing platform built specifically for ecommerce, with native, real-time data sync to platforms like Shopify and predictive analytics — churn risk, expected customer lifetime value, and send-time optimization — generated from a store's actual purchase history rather than generic email engagement data.",
+    whoItsFor: [
+      "Ecommerce stores, especially Shopify merchants, that want purchase-data-driven segmentation and automation rather than generic email marketing",
+      "Stores that want SMS and email managed in one platform with shared customer data",
+      "Businesses with enough order history for Klaviyo's predictive features to become useful, since they depend on real purchase data",
+    ],
+    whoShouldAvoid: [
+      "Non-ecommerce small businesses — Klaviyo's feature set and pricing are built entirely around store and order data, so a service business or newsletter-only sender gains little over a simpler tool like Mailchimp or Kit",
+      "Very new stores without much order history yet — predictive analytics need real purchase data to become useful, so the platform's signature strength won't show results immediately",
+      "Anyone wanting flat, predictable pricing regardless of list size — cost is tied directly to active profile count and grows as the list does",
+    ],
+    keyFeatures: [
+      { text: "Free plan includes up to 250 active profiles, 500 emails/month, and $5 of mobile messages/month; paid Email plans start at $20/mo for 251-500 active profiles with unlimited sends", source: "vendor" },
+      { text: "Predictive analytics (expected customer lifetime value, churn risk, and send-time optimization) are generated automatically from a store's synced purchase history once enough order data accumulates", source: "vendor" },
+      { text: "Native, real-time data sync with Shopify and other ecommerce platforms feeds segmentation directly from order and product data, without a separate integration setup", source: "vendor" },
+    ],
+    easeOfUse:
+      "Built around ecommerce data from the ground up, so a store with Shopify (or a similar platform) connected gets useful segmentation and automation flows faster than a general-purpose tool — but that same ecommerce-first design means non-store use cases, like newsletters or service businesses, don't map cleanly onto the interface.",
+    pros: [
+      "Predictive analytics (customer lifetime value, churn risk, send-time optimization) built from real purchase data, not just email engagement",
+      "Native, real-time Shopify (and other ecommerce platform) integration with no separate sync tool required",
+      "Unlimited email sends on every paid tier — cost is driven by list size, not send volume",
+    ],
+    cons: [
+      "Pricing is tied to active profile count and increases as a list grows, similar to most contact-based email tools",
+      "Predictive features need real order history to become useful, so very new stores see less immediate value",
+      "Built specifically for ecommerce — a poor fit for service businesses or newsletter-only senders without purchase data to feed it",
+    ],
+    bestUseCases: [
+      "A Shopify (or similar platform) store that wants segmentation and automation built directly from real purchase and product data",
+      "An ecommerce business that wants SMS and email managed in one platform with shared customer profiles",
+    ],
+    methodologyScores: { featureCoverage: 8, pricingTransparency: 6, easeOfAdoption: 6, smbFit: 6 },
+    verdict:
+      "Klaviyo is the strongest ecommerce-specific pick in this category — its predictive analytics and native store-data sync are hard to replicate with a general-purpose email tool. That specialization is also the tradeoff: a service business or newsletter sender gains nothing from purchase-history-driven segmentation and would be better served by Mailchimp, ActiveCampaign, or Kit. For an actual ecommerce store, especially one on Shopify, Klaviyo is worth evaluating first.",
+  },
+  {
     slug: "asana",
     name: "Asana",
     category: "project-management",
