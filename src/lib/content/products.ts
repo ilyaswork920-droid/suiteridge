@@ -154,6 +154,81 @@ export const products: Product[] = [
       "ActiveCampaign is the strongest automation engine in this category for a small business willing to spend real setup time. If the ambition is a single welcome email and a monthly newsletter, it's more tool than needed — that's what Mailchimp or Kit are for.",
   },
   {
+    slug: "hubspot",
+    name: "HubSpot",
+    category: "email-marketing",
+    tagline: "The most all-in-one option — a genuinely free CRM, but pricing jumps hard once you need real automation.",
+    website: "https://www.hubspot.com",
+    pricingLastVerified: "2026-08-22",
+    hasFreePlan: true,
+    startingPrice: "Free (2 users, 1,000 contacts) · from $20/mo per seat on Starter",
+    pricing: [
+      {
+        name: "Free",
+        price: "$0/mo",
+        bestFor: "Very small teams testing basic CRM and marketing tools together",
+        features: ["Up to 2 users", "1,000 contacts", "Contact and deal management", "Basic email marketing and live chat", "No expiration date"],
+      },
+      {
+        name: "Starter",
+        price: "From $20/mo per seat",
+        billingNote: "Billed annually; promotional first-year pricing is sometimes offered to new customers",
+        bestFor: "Small teams ready to remove HubSpot branding and add core marketing tools",
+        features: ["1,000 marketing contacts included", "Live chat and basic conversational bots", "10 reporting dashboards"],
+      },
+      {
+        name: "Professional",
+        price: "$800/mo (billed annually) · $890/mo (billed monthly)",
+        billingNote: "Includes 3 seats and 2,000 contacts; one-time $3,000 onboarding fee required",
+        bestFor: "Teams needing full marketing automation, A/B testing, and custom reporting",
+        features: ["Workflow automation", "A/B testing for email and landing pages", "Custom reporting dashboards", "Lead scoring"],
+      },
+      {
+        name: "Enterprise",
+        price: "$3,600/mo",
+        billingNote: "Includes 5 seats and 10,000 contacts; one-time $7,000 onboarding fee required",
+        bestFor: "Larger marketing teams needing attribution and governance",
+        features: ["Customer journey analytics", "Multi-touch revenue attribution", "Advanced permissions and governance"],
+      },
+    ],
+    whatItDoes:
+      "HubSpot is an all-in-one CRM platform with a dedicated Marketing Hub product line for email campaigns, marketing automation, landing pages, and lead scoring — built around a shared contact database with HubSpot's free CRM, sales, and service tools, rather than existing as a standalone email sender.",
+    whoItsFor: [
+      "Businesses that want CRM, sales, and marketing tools sharing one contact database instead of syncing separate platforms",
+      "Teams that can run on the free CRM tier long-term and only need to add Starter-level marketing tools",
+      "Growing companies planning to eventually need advanced automation, attribution, and multi-team governance",
+    ],
+    whoShouldAvoid: [
+      "Small businesses that just need to send email campaigns — the jump from Starter to Professional is steep, and Professional is where real automation and reporting depth live",
+      "Anyone budgeting only the advertised monthly price — the $3,000 (Professional) and $7,000 (Enterprise) onboarding fees are mandatory one-time add-ons, not optional",
+      "Teams that want simple, predictable pricing — HubSpot's per-seat plus per-contact-tier structure makes the real monthly cost harder to estimate upfront than a flat-rate tool",
+    ],
+    keyFeatures: [
+      { text: "Free CRM tier includes contact and deal management, basic email marketing, live chat, and access to HubSpot's app marketplace for up to 2 users and 1,000 contacts, with no expiration date", source: "vendor" },
+      { text: "Marketing Hub Professional ($800-890/mo) is the first tier with workflow automation, A/B testing, and custom reporting — and requires a one-time $3,000 onboarding fee", source: "vendor" },
+      { text: "The real cost gap between Starter and Professional is larger than the headline monthly prices suggest once the mandatory onboarding fee is included — worth budgeting for both numbers before comparing to a single-tier tool", source: "editorial" },
+    ],
+    easeOfUse:
+      "The free CRM and Starter tier are approachable for a small team, but the platform's real depth is built around a Professional-tier setup — expect a genuine onboarding investment, reflected directly in the mandatory onboarding fee, once workflow automation and custom reporting enter the picture.",
+    pros: [
+      "Genuinely usable free CRM tier with no expiration date, not just a trial",
+      "Contacts, deals, and marketing tools share one database instead of needing separate synced tools",
+      "Deepest reporting and attribution tooling in this category once on Professional or Enterprise",
+    ],
+    cons: [
+      "Steep price jump from Starter ($20/seat) to Professional ($800-890/mo), with a mandatory $3,000 onboarding fee at that tier",
+      "Contact-tier pricing means the real monthly cost grows independently of seat count",
+      "Meaningful marketing automation is gated to Professional and above — Starter is closer to a lightweight CRM add-on than a full automation platform",
+    ],
+    bestUseCases: [
+      "A small business that wants free CRM, sales, and basic email tools sharing one contact database",
+      "A growing team that has budgeted for Professional-tier pricing and wants deep automation, attribution, and reporting without stitching together separate tools",
+    ],
+    methodologyScores: { featureCoverage: 9, pricingTransparency: 4, easeOfAdoption: 6, smbFit: 6 },
+    verdict:
+      "HubSpot's free CRM is a legitimate long-term option for a very small team, and Starter is a reasonable way to add basic marketing tools without much added cost. The catch is what comes next: real automation, reporting, and attribution live behind Professional, which carries a materially higher monthly price plus a mandatory five-figure first-year onboarding cost. It's worth deciding whether that depth is actually needed — or whether Mailchimp or ActiveCampaign covers the same ground for meaningfully less — before making the jump.",
+  },
+  {
     slug: "asana",
     name: "Asana",
     category: "project-management",
