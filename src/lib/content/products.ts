@@ -515,6 +515,88 @@ export const products: Product[] = [
       "ClickUp wins on pure feature-per-dollar value, but that value is only realized if someone on the team is willing to configure it properly. Teams that want to be productive on day one should start with Asana or Trello instead.",
   },
   {
+    slug: "monday",
+    name: "monday.com",
+    category: "project-management",
+    tagline: "Highly visual and flexible — priced in seat buckets that push most small teams to pay for more seats than they use.",
+    website: "https://monday.com",
+    pricingLastVerified: "2026-08-22",
+    hasFreePlan: true,
+    startingPrice: "Free (up to 2 seats) · from $9/seat/mo on Basic (3-seat minimum)",
+    pricing: [
+      {
+        name: "Free",
+        price: "$0/mo",
+        bestFor: "Individuals or a 2-person team trying the platform",
+        features: ["Up to 2 seats", "3 boards", "200+ templates", "iOS and Android apps"],
+      },
+      {
+        name: "Basic",
+        price: "$9/seat/mo",
+        billingNote: "Billed annually ($12/seat monthly); sold in seat buckets starting at 3, so the real minimum is $27/mo",
+        bestFor: "Small teams needing unlimited items and viewers",
+        features: ["Unlimited free viewers", "Unlimited items", "Basic AI credits"],
+      },
+      {
+        name: "Standard",
+        price: "$12/seat/mo",
+        billingNote: "Billed annually ($14/seat monthly); 3-seat minimum bucket brings the real minimum to $36/mo",
+        bestFor: "Teams needing automation, integrations, and guest access",
+        features: ["250 automation and integration actions/month", "Timeline and Gantt views", "Guest access"],
+      },
+      {
+        name: "Pro",
+        price: "$19/seat/mo",
+        billingNote: "Billed annually ($24/seat monthly); 3-seat minimum bucket brings the real minimum to $57/mo",
+        bestFor: "Growing teams needing heavy automation and private boards",
+        features: ["25,000 automation and integration actions/month", "Private boards and docs", "Time tracking"],
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        bestFor: "Large organizations needing advanced governance",
+        features: ["250,000 automation and integration actions/month", "Advanced permissions", "99.9% uptime SLA"],
+      },
+    ],
+    whatItDoes:
+      "monday.com is a highly visual work-management platform built around customizable boards — spreadsheet-like grids that can be reconfigured into Kanban, timeline, or calendar views — with automation, integrations, and built-in AI tools layered on top.",
+    whoItsFor: [
+      "Teams that want a highly visual, color-coded board view as the primary way of tracking work",
+      "Small businesses willing to buy in seat buckets (3, 5, 10, 15...) rather than exact headcount",
+      "Teams that want dashboards, automation, and integrations bundled progressively as they move up tiers",
+    ],
+    whoShouldAvoid: [
+      "Very small teams of 3–4 people — the seat-bucket system starting at 3 means a 4-person team often pays for a 5-seat bucket, wasting budget right at the boundary",
+      "Teams that want simple, exact per-user billing without rounding up to the next seat bucket",
+      "Anyone comparing only the advertised per-seat price — the real monthly minimum (bucket size times per-seat price) is higher than the headline number suggests",
+    ],
+    keyFeatures: [
+      { text: "Free plan is limited to 2 seats and 3 boards", source: "vendor" },
+      { text: "Paid plans (Basic, Standard, Pro) are billed in seat buckets starting at 3 seats and increasing in steps (3, 5, 10, 15...), not per exact headcount", source: "vendor" },
+      { text: "Automation and integration actions scale sharply by tier: 250/month on Standard, 25,000/month on Pro, 250,000/month on Enterprise", source: "vendor" },
+      { text: "The seat-bucket structure means the real minimum monthly cost is bucket size times per-seat price, not the advertised per-seat number alone — worth calculating for your actual headcount before comparing to a tool with exact per-user billing", source: "editorial" },
+    ],
+    easeOfUse:
+      "The visual board format is approachable for basic task tracking, but configuring automations, dashboards, and multiple view types takes real setup time — closer to ClickUp's learning curve than Asana's more guided onboarding.",
+    pros: [
+      "Highly visual, color-coded boards that are easy to scan at a glance",
+      "Automation and integration depth scales meaningfully from Standard through Enterprise",
+      "Broad template library (200+) covering many team types out of the box",
+    ],
+    cons: [
+      "Seat-bucket pricing (3, 5, 10, 15...) means most small teams pay for more seats than their actual headcount",
+      "Free plan's 2-seat cap is one of the tightest in this category",
+      "Meaningful automation and guest access require the Standard tier or above",
+    ],
+    bestUseCases: [
+      "A team of 5 or more that can fill a seat bucket efficiently and wants a highly visual board-based workflow",
+      "Teams that want automation and integrations to scale with them from Standard through Enterprise",
+    ],
+    methodologyScores: { featureCoverage: 8, pricingTransparency: 5, easeOfAdoption: 6, smbFit: 6 },
+    verdict:
+      "monday.com's biggest strength is also where its pricing gets awkward: the visual board format and progressively deeper automation are genuinely useful, but paid plans are sold in seat buckets starting at 3 rather than exact headcount, so a small team often pays for seats it doesn't use. It's worth calculating the real bucket-adjusted monthly cost — not just the advertised per-seat price — before comparing it to Asana or ClickUp.",
+  },
+  {
     slug: "calendly",
     name: "Calendly",
     category: "appointment-scheduling",

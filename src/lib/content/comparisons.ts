@@ -48,6 +48,29 @@ export const comparisons: ComparisonEntry[] = [
     lastVerified: "2026-08-15",
   },
   {
+    slug: "clickup-vs-monday",
+    category: "project-management",
+    productSlugs: ["clickup", "monday"],
+    title: "ClickUp vs monday.com",
+    metaDescription:
+      "ClickUp vs monday.com compared on automation depth, pricing structure, and ease of setup — with a clear verdict for each team situation.",
+    intro:
+      "Both are highly customizable project management platforms that ask a team to invest real setup time in exchange for depth. The real differences are in automation limits, seat-based pricing structure, and how much AI is bundled at each tier.",
+    chooseFirstIf: [
+      "You want to consolidate docs, whiteboards, goals, and dashboards into a single subscription without seat-bucket rounding",
+      "Your team size doesn't cleanly fit monday.com's 3/5/10/15-seat buckets",
+      "You're comfortable paying for AI features (ClickUp Brain) as a separate add-on rather than bundled into the base tier",
+    ],
+    chooseSecondIf: [
+      "You want a highly visual, color-coded board as the primary way your team sees its work",
+      "Your team size fits neatly into a seat bucket (exactly 3, 5, 10, or 15 people)",
+      "You want AI credits bundled into the plan itself rather than purchased as a separate add-on",
+    ],
+    verdict:
+      "Both tools ask for real setup time before they pay off, and both gate their most useful automation behind a mid-tier plan. The deciding factor is usually pricing mechanics, not features: ClickUp bills per exact seat plus an optional AI add-on, while monday.com bills in seat buckets that round most small teams up. Count your actual headcount against monday.com's bucket sizes before assuming its lower headline per-seat price is actually cheaper.",
+    lastVerified: "2026-08-22",
+  },
+  {
     slug: "calendly-vs-acuity-scheduling",
     category: "appointment-scheduling",
     productSlugs: ["calendly", "acuity-scheduling"],
