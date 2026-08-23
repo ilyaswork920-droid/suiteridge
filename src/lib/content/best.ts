@@ -91,6 +91,18 @@ export const bestLists: BestListEntry[] = [
         label: "Not sure you need automation at all? See our guide: What Is Email Marketing Automation?",
         href: "/guides/what-is-email-marketing-automation",
       },
+      {
+        label: "Want an all-in-one CRM instead of a dedicated email tool? See our HubSpot review.",
+        href: "/reviews/hubspot",
+      },
+      {
+        label: "Running a newsletter or online course rather than a traditional small business? See our Kit review.",
+        href: "/reviews/kit",
+      },
+      {
+        label: "Selling physical products through an online store? See our Klaviyo review for ecommerce-specific email marketing.",
+        href: "/reviews/klaviyo",
+      },
     ],
     showBottomCta: true,
     lastVerified: "2026-08-22",

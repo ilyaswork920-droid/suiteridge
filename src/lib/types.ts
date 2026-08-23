@@ -42,6 +42,13 @@ export interface Product {
     smbFit: number;
   };
   verdict: string;
+  /**
+   * Optional genuine cross-links to another product's review or an existing
+   * best-list page, for cases where this product isn't the right fit and a
+   * more relevant option already exists elsewhere on the site. Additive and
+   * opt-in — unset on every product except where explicitly populated.
+   */
+  relatedLinks?: { label: string; href: string }[];
 }
 
 export interface ComparisonEntry {

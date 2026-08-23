@@ -363,6 +363,16 @@ export const products: Product[] = [
     methodologyScores: { featureCoverage: 8, pricingTransparency: 6, easeOfAdoption: 6, smbFit: 6 },
     verdict:
       "Klaviyo is the strongest ecommerce-specific pick in this category — its predictive analytics and native store-data sync are hard to replicate with a general-purpose email tool. That specialization is also the tradeoff: a service business or newsletter sender gains nothing from purchase-history-driven segmentation and would be better served by Mailchimp, ActiveCampaign, or Kit. For an actual ecommerce store, especially one on Shopify, Klaviyo is worth evaluating first.",
+    relatedLinks: [
+      {
+        label: "Running a service business or newsletter instead of an online store? See our Mailchimp review.",
+        href: "/reviews/mailchimp",
+      },
+      {
+        label: "Publishing content or selling digital products rather than physical goods? See our Kit review.",
+        href: "/reviews/kit",
+      },
+    ],
   },
   {
     slug: "asana",
@@ -805,6 +815,12 @@ export const products: Product[] = [
     methodologyScores: { featureCoverage: 7, pricingTransparency: 7, easeOfAdoption: 7, smbFit: 7 },
     verdict:
       "Square Appointments' clearest advantage is being free for a single staff member and location, with card processing built into the same account rather than a separate integration — a strong fit for a solo provider already using Square for payments. Once a business needs multiple staff, Plus is priced per location rather than per seat, which works in your favor with several staff at one site but adds up quickly across multiple locations. For service businesses focused on packages and memberships specifically, Acuity remains the deeper tool; for pure meeting scheduling, Calendly is simpler. Square Appointments is the strongest pick when payment processing is the deciding factor.",
+    relatedLinks: [
+      {
+        label: "Comparing payment-integrated booking options more broadly? See our guide to online booking software for service businesses.",
+        href: "/best/online-booking-software-for-service-businesses",
+      },
+    ],
   },
 ];
 

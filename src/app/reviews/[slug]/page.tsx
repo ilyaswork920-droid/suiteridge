@@ -167,6 +167,18 @@ export default async function ReviewPage({
         </section>
       )}
 
+      {product.relatedLinks && product.relatedLinks.length > 0 && (
+        <div className="mb-10 flex flex-col gap-2">
+          {product.relatedLinks.map((r) => (
+            <p key={r.href} className="text-sm text-ink-faint">
+              <Link href={r.href} className="text-accent hover:underline">
+                {r.label}
+              </Link>
+            </p>
+          ))}
+        </div>
+      )}
+
       <section className="mb-10">
         <VerdictBox>{product.verdict}</VerdictBox>
       </section>
