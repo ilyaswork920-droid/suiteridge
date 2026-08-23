@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { LinkCard } from "@/components/LinkCard";
 import { Newsletter } from "@/components/Newsletter";
@@ -6,6 +7,12 @@ import { categoryList, siteConfig } from "@/lib/site-config";
 import { products } from "@/lib/content/products";
 import { comparisons } from "@/lib/content/comparisons";
 import { bestLists } from "@/lib/content/best";
+
+export const metadata: Metadata = {
+  other: {
+    "impact-site-verification": "d911c637-042a-4cd1-80fd-4f76d92806ee",
+  },
+};
 
 export default function HomePage() {
   return (
